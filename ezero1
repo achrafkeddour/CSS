@@ -1,0 +1,69 @@
+.div1 {
+    background-color: rgba(46, 167, 92, 0.384);/*or #404500; */
+    
+    background-repeat: no-repeat; /* by default it's "repeat" y3ni si la photo ta3na sgira fsize elle va se repete hata t3amer ga3 lcontainer ta3ha */
+    /* kayn also repeat-x(se repete horizontallement brk) w repeat-y(verticallement) */
+
+    background-attachment:fixed; /*by default it's scroll wfixed y3ni netla3 wla nehbat lbackground y93ed kima rah */
+    background-position: 400px; /*wella nkteb hadou direct "center top"*/
+    background-size: 10%; /*no effect */
+    /* cover : ndir stretch llphoto bach ngheti ga3 lcontainer
+    contain : ndirou resize llbackground bach yb9a fully visible (la photo matefsedch kima cover ) 
+    wnkdr n7at d % au lieu de px 
+    the best ndir 100% 100% mindak */
+
+    padding : 40px 0 20px 90px;
+    /* padding: top right bottom left; */
+    margin : 0;
+}
+body {
+    background-image: URL("../imgs/first.jpg"); 
+    background-repeat: no-repeat;
+    background-size : 100% 100%;
+    background-attachment: fixed;
+    
+}
+
+.mar {
+    background: #554478;
+    color: #ffffff;
+    width: 50%;
+    margin: 40px auto;
+    border : 10px double #0045ff ; 
+    /* i can use 
+    border-width : top right bottom left
+    border-color : red/yellow/orange... (it accept four values also -top right bottom left-)
+    border-style: solid/dashed/dotted/double... (it accept four values also -top right bottom left-) */
+}
+.disp {
+    background: #554478;
+    color: #ffffff;
+    padding : 10px;
+    margin: 10px;
+}
+.disp1 {
+    display: block; /*by default for the div element */
+    /* if i didn't specify the width .. it take all the width of the container 
+    respect (kolch) height, width, padding, margin .
+    ydir line break w7do 
+    
+    */
+}
+.disp2 {
+    display:inline; /*by default for the span element*/
+    /* respect padding and margin (left and right only) + maydich ga3 la ligne 
+    do not respect height,width
+    do not add line break (ki nzid haja tji moraha fla meme ligne) 
+    */
+
+}
+.disp3 {
+    display: inline-block;
+    /* respect padding,margin,height,width */
+    /* don't take all the width of the container */
+    /* يحترم كلش ومايديش قاع السطر */
+}
+.disp4 {
+    /* display: none; ndirha walou mayban */
+    visibility: hidden;
+}
