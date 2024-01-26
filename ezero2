@@ -1,0 +1,136 @@
+body {
+    background-color: #ddd;
+}
+div p { /*any paragraph inside <div> element*/
+    color :rgb(255, 255, 255);
+    display: inline-block;
+    background-color: rgb(183, 65, 220);
+    padding: 20px;
+    margin:10px;
+    
+}
+.mi {
+    min-width: 400px; /*same for min/max-height */
+    background-color: chartreuse;
+    display:inline-block;
+    margin: 20px;
+    padding: 20px;;
+}
+.ma {
+    padding: 10px;
+    background-color: red;
+    color:#fff;
+    max-width:600px; 
+    /*same for min/max-height */
+    margin:10px;
+    display:inline-block;
+    
+}
+.ff{
+    background-color: chocolate;
+    color: rgb(153, 254, 254);
+    padding: 20px;
+    width: fit-content; /* width ykoun 3la 7ssab el content */
+    text-shadow: 65px -9px 2px #000000; /*  horitontal   vertical   blur(الضباب)   color  */
+}
+.over{
+    background-color: rgb(236, 255, 28);
+    color: rgb(13, 17, 17);
+    margin: 40px auto;
+    border-radius: 4px;
+    width:150px;
+    height: 150px;
+
+    /* overflow: hidden;  hadi nkhabi biha ziada  */
+    /* overflow-x,overflow-y ..the Same */
+    /* by default it is : visible */
+    /* 'scroll' mli7a ki tkoun 3ndi ziada sinon makaleh ndirha */
+    overflow : auto; /* the best (ki tkoun ziada w7dou ydir scroll) */
+    /* back ntabet la page ta3i generalement c mieux ndir : overflow-x: hidden;
+                                                            overflow-y: auto; w3la 7sab le cas je change */
+
+}
+.algn {
+    background-color: aqua;
+    text-align:right;
+    direction: rtl; /* important !!!    we use it for arabic websites ...by default kanet left to right (ltr) */
+}
+img {
+    vertical-align: top; /* lektiba tji mn fo9 m3a la photo (ndir inspecter wnchouf les autres choix bach nfhem) */
+}
+div a {
+    background-color: rgb(255, 0, 25);
+    color: #ddd;
+    text-decoration: line-through; /* none(mkach) , underline(mnt7t) , overline(mnfo9)  */
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px 46vw;
+    padding: 10px;
+}
+h3 {
+    background-color: #ddd;
+    text-align: center;
+    text-transform: capitalize; /*first letter is capital .. kayn also uppercase,lowercase */
+}
+h4 { /*important !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11*/
+    background-color: #cc7676;
+    text-indent: 100px; /*important */  /*lokan ndirha -9999px twli matbanch ga3 (rahi bara) */
+    letter-spacing: -1px; /* wkayn word-spacing(espace between words not letters)*/
+}
+.lin {
+    line-height: 0.9; /*la distance entre les lignes*/
+    text-indent: 220px;
+}
+.brk {
+    margin:20px;
+    padding:20px;
+    background-color: cadetblue;
+    width:300px;
+    word-break: break-all; /* tna7i el overflow(link jay kima kelma w7da) and we break to the next line */
+}
+.tex {
+    background-color: rgba(40, 78, 153, 0.821);
+    color:rgb(166, 218, 126);
+    padding: 10px;
+    width:200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tex:hover {
+    overflow: visible;
+    white-space: normal;
+}
+.parent {
+    background-color: #fff;
+    border: 6px double #113ddd;
+    padding: 50px;
+    margin: 10px;
+}
+.child {
+    border: inherit;/*haka bach ki nbdl el border of parent ytbdl meme ta3 child*/
+    padding: inherit;/*haka bach ki nbdl el padding of parent ytbdl meme ta3 child*/
+    font-family: 'Sixtyfour', sans-serif; /*dert link mn google fonts */
+}
+/* --------------------- CSS UNITS --------------------------------------------
+  1em = the size of the parent element 
+  
+  1rem = the size of the <html></html> element (by default it's 16px) 
+  
+  le pourcentage (%) ykoun par rapport a le pere 100% = 1em (but the em is more flexible) 
+
+  1vw (viewport width) 1% mn el width ta3 screen(la page li rana nchoufou) li rana nchoufou fiha --> the best for responsive 
+  1vh height same 
+
+*/
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color:rgb(255, 208, 0);
+    font-weight: bolder;
+    font-size: larger;
+    border: 4px dashed #00578e;
+    cursor: row-resize; /* by default it is pointer or others (ndir inspecter wnkhayer) */
+    padding : 20px;
+}
