@@ -1,0 +1,129 @@
+/* if i want to make 6 <div> elements in one line (using 'float & clear' or other ways) 
+
+so i have 7 spaces (let's take 10px as the width for one space) --> 7*10 = 70px for spaces
+
+calculing the width of one <div> : 
+width : calc((100% - 70px)/6);
+wndir : margin-left: 10px; (for spaces)
+*/
+
+.a {
+    background-color: rgb(255 0 0 / .5);
+    margin-bottom: 10px;
+}
+.b {
+    background-color: rgb(255 0 0);
+    opacity: .5;
+    margin-bottom: 25px;
+}
+.parent {
+    background-color: #ddd;
+    font-weight: bolder;
+    color: orangered;
+    position: relative;
+    height: 300px;
+    width: 500px;
+}
+.one {
+    width: fit-content;
+    background-color: rgb(0, 157, 255);
+    color: black;
+    padding: 15px;
+    /* position:absolute; ghir ndirha .. el <div> li mn t7t(wla li 3allimin yji t7t had el <div>*/ 
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.two {
+    width: fit-content;
+    background-color: rgb(50, 248, 47);
+    color: black;
+    padding: 15px;
+}
+body {
+    min-height: 3000px;
+}
+.three {
+    background-color: rgb(58, 56, 56);
+    color: #ffffff;
+    width: fit-content;
+    padding:15px;
+    position:fixed;
+    top: 22vh;
+    left:50vw;
+}
+.four {
+    background-color: rgb(93, 32, 208);
+    color: #ffffff;
+    padding:15px;
+    position: sticky;
+    top:0;
+}
+.z { /* a class shared between three <div> elements */
+    position: absolute; /*ghir ndirha ywliw les elements ga3 fo9 ba3dahom (ettali fo9hom ga3) */
+    padding:15px;
+    font-size: larger;
+}
+/* lazem ndir position absolute (wela child ykoun relative dakhel parent absolute) 
+bach n9dr ndir z-index */
+.first {
+    background-color: blue;
+    left: 60px;
+    top:857px;
+    z-index: 2;
+}
+.second {
+    background-color: chartreuse;
+    z-index: 4;
+}
+.third {
+    z-index: -1;
+    left: 40px;
+    background-color: red;
+}
+
+.lis {
+    list-style-type:disclosure-open; /*on peut mettre ici des autres formes*/
+    /*n9drou nna7iwha ga3 b : none */
+}
+.lis li {
+    margin: 10px;
+    background-color: #ddd;
+    list-style-position: inside; /*by defualt kanet 'outside' (hadouk les formes on les considere outside) */
+}
+
+.lis1 {
+    background-color: rgb(54, 106, 172);
+    list-style-type:none;
+    padding:10px;
+    margin:0;
+    display: flex;
+    column-gap: 5px;
+}
+.ho {
+    display: none;
+    padding: none;
+    height: fit-content;
+    width: fit-content;
+}
+.element-hov:hover .ho {
+    display: block;
+}
+
+table {
+    border: 2px solid blue;
+    background-color: #f2eae3;
+    width:50%;
+    text-align: center;
+    margin: 0 auto;
+    border-spacing: 40px;
+}
+table th {
+    background-color: orange;
+    padding: 20px;
+}
+table td {
+    padding: 20px;
+    background-color: red;
+    border: 2px solid blue;
+}
