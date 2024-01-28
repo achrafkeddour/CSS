@@ -1,0 +1,112 @@
+/* Select and style the first <p> element that is placed immediately after <div> elements*/
+div + p {
+  background-color: rgb(217, 118, 118);
+}
+
+#checkbox:checked + label { /*haka we select the label that follows the checkbox input when it's checked */
+    color:rgb(255, 255, 255);
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 4px;
+}
+/* mn ghir checked kayn : hover , visited , focus ...etc */
+.gg {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(31, 72, 116);
+}
+div:empty { /*div li mafih walou*/
+    padding: 20px;
+}
+/* i can say just :
+:empty {
+to select all the empty elements    
+}*/
+
+#te {
+    border: 3px solid green;
+}
+#te:focus {
+    border: 2px dashed blueviolet;
+    outline: none;
+}
+
+.num1::first-letter {
+    font-size: 90px;
+    background: #0b065f;
+    color: whitesmoke;
+} 
+.num2::first-line {
+    font-weight: bolder;
+    background-color: cadetblue;
+}
+.num3::selection {
+    color: red;
+    background-color: #22ff00;
+}
+/* ::selection { }  directly for all the page */
+
+/* i will start without ::after and ::before */
+.contain-K {
+    display: flex;
+}
+.letter , .sentence , .Lor , .paragraph {
+    margin: 30px 15px 30px 70px;
+    color:#180d21;
+    background-color: rgb(183, 183, 183);
+    padding: 30px;
+    font-size: larger;
+}
+.sentence , .paragraph {
+    margin-left:0;
+    position:relative; /*lazem ndirha psk ::after ra7 tadi position: absolute;*/
+    max-width: 60vw;
+}
+span {
+    position: absolute;
+    width: 8px;
+    height:100%;
+    background-color: #22ff00;
+    top:0;
+    right: -10px;
+}
+.paragraph::after {
+    content: "after!"; /*lazem nzidha fel ::after,before ----------------------------------------------------------------------- */
+    position: absolute; /*.paragraph rahi relative deja */
+    width: 8px;
+    height:100%;
+    background-color: #22ff00;
+    top:0;
+    right: -10px;
+    display: none;
+}
+.paragraph:hover::after {
+    display: block;
+}
+.paragraph::before {
+    content: "";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    top: 40%; 
+    left:-12px;
+    border-style: solid;
+    border-width: 10px;
+    border-color:rgba(0, 0, 255, 0) rgb(255, 0, 17) green yellow;
+    
+}
+.feature {
+    width: 400px;
+    height: 40px;
+    background-color: #3ab418;
+    margin: 0 auto;
+  /*  -webkit-border-radius:10px ; /*for chrome and new opera
+    -moz-border-radius:10px;           firefox    
+    -ms-border-radius:10px;            Ie, Edge
+    -o-border-radius:10px;             old opera
+    kayn site ismou 'can i use' + extensions named 'css-auto-prefix', 'Task Runner' ...etc
+    */
+    box-shadow: 4px 4px 4px 10px red inset;/*H-shadow V-shadow Blur Spread(انتشار) color inset means (shadow ykoun vers linterieur)*/  
+
+}
