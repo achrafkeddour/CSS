@@ -1,0 +1,52 @@
+.trans {
+    background-color: rgb(62, 0, 196);
+    color: aliceblue;
+    width: 400px;
+    height: 280px;
+    font-size: larger;
+    transition-duration: 1s; /*the duration of executing the transition*/
+    transition-delay: 0.2s; /*time to response -ysenna une duree bach ybda yt7arek- */
+    transition-property: margin-top,margin-left; /* cela veut dire que transition-duration,delay vont 
+    etre appliquees seulement sur margin-top,margin-left
+    et pour background-color: rgb(62, 196,0 ); hadi tndar b hover 3adi bla wa9t
+    by default it's " transition-property: all;"  */
+
+    transition-timing-function: linear;/* it keeps the same speed in transition */
+    /*by default it's ease (ybda t9il, apres yzreb, ftali y3awd yt9al*/
+    /* kayn ease-in , ease-out , ease-in-out */
+    /* transition-duration: 1s, 3s; means: '1s for margin-top ..and 3s for margin-left' */
+}
+.trans:hover {
+    margin-left:50px ;
+    margin-top: 20px;
+    background-color: rgb(62, 196,0 );
+}
+.imp {
+    background-color: tomato !important;
+}
+.imp span {
+    color: white;
+    font-weight: bolder;
+}
+
+:root {
+    --maincolor1: rgb(0, 217, 255); /*nbdl ghir hna ytbdlou li b9aw*/
+    --mainpadding: 10px;
+    --mainfontsize: 20px;
+}
+.varia {
+    background-color: var(--maincolor1);
+    padding: var(--mainpadding)  ;
+    font-size: var(--mainfontsize); /*il sera 21px*/
+    margin: var(--mainpadding);
+}
+.varia2 {
+    background-color: var(--maincolor1);
+}
+
+
+
+
+
+
+
